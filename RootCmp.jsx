@@ -1,17 +1,17 @@
 import { Home } from './pages/Home.jsx'
 import { About } from './pages/About.jsx'
-import { CarIndex } from './pages/CarIndex.jsx'
+import { BookIndex } from './pages/BookIndex.jsx'
 
 const { useState } = React
 
 export function App() {
-  const [page, setPage] = useState('home')
+  const [page, setPage] = useState('bookIndex')
 
   return (
     <section className='app'>
       <header className='app-header full main-layout'>
         <section>
-          <h1>React Car App</h1>
+          <h1>React Book Shop App</h1>
           <nav className='app-nav'>
             <a onClick={() => setPage('home')} href='#'>
               Home
@@ -28,7 +28,7 @@ export function App() {
       <main className='main-layout'>
         {page === 'home' && <Home />}
         {page === 'about' && <About />}
-        {page === 'bookIndex' && <CarIndex />}
+        {page === 'bookIndex' && <BookIndex />}
       </main>
     </section>
   )
